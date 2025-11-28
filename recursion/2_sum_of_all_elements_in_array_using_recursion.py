@@ -6,3 +6,11 @@ def sum_of_an_array(n):
     return n[0] + sum_of_an_array(n[1::])
 
 print(sum_of_an_array(a))
+
+
+
+#Another way
+def sum_of_array(arr, i=0):
+    if i == len(arr):
+        return 0
+    return arr[i] + sum_of_array(arr, i + 1)
